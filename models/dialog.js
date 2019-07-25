@@ -37,7 +37,6 @@ class Dialog {
             let set = {
               sender_id: from,
               recipient_id: to,
-              created_at: + new Date(),
               text: message
             };
             connection.query(query, set, function (error, results, fields) {
