@@ -16,7 +16,7 @@ class Dialog {
                 '((message.sender_id= :id1 and message.recipient_id = :id2) ' +
                 'or ' +
                 '(message.sender_id= :id1 and message.recipient_id = :id2))';
-            connection.query(query,function (error, results, fields) {
+            connection.query(query, {id1, id2}, function (error, results, fields) {
                 console.log(error, results);
                 cb(results);
             });

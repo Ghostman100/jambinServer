@@ -12,7 +12,7 @@ pool.getConnection(function (err, connection) {
        'sender_id int,' +
        'recipient_id int,' +
        'created_at timestamp,' +
-       'text varchar(400)' +
+       'text varchar(400),' +
        'PRIMARY KEY(id))';
     // connection.query(createDialog, function (error, results, fields) {
     //     // When done with the connection, release it.
