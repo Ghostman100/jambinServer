@@ -29,7 +29,7 @@ wss.on('connection', function connection(ws) {
                 break;
             }
             case 'message': {
-                Dialog.create(client.id, recipientId, data.message, (message) => {
+                Dialog.create(client.id, recipientId, data.text, (message) => {
                     if (clients[recipientId]) {
                         clients[recipientId].ws.send(JSON.stringify(message))
                     }
