@@ -13,7 +13,7 @@ class Dialog {
             const query = 'SELECT * ' +
                 'from messages ' +
                 'where ' +
-                '(messages.sender_id = ' + id1 + 'and messages.recipient_id = ' + id2 +
+                '(messages.sender_id = ' + id1 + ' and messages.recipient_id = ' + id2 +
                 ' or ' +
                 'messages.sender_id = ' + id2 + ' and messages.recipient_id = ' + id1 + ')';
             connection.query(query, {id1: id1, id2: id2}, function (error, results, fields) {
