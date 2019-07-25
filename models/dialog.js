@@ -13,9 +13,9 @@ class Dialog {
             const query = 'SELECT * ' +
                 'from messages ' +
                 'where ' +
-                '((message.sender_id= :id1 and message.recipient_id = :id2) ' +
+                '((sender_id= :id1 and recipient_id = :id2) ' +
                 'or ' +
-                '(message.sender_id= :id1 and message.recipient_id = :id2))';
+                '(sender_id= :id1 and recipient_id = :id2))';
             connection.query(query, {id1: id1, id2: id2}, function (error, results, fields) {
                 console.log(error, results);
                 cb(results);
