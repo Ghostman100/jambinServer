@@ -19,6 +19,7 @@ class Dialog {
             connection.query(query, {id1: id1, id2: id2}, function (error, results, fields) {
                 console.log(error, results);
                 cb(results);
+                connection.release();
             });
             connection.on('error', function (err) {
                 console.log('onerror', err);
@@ -42,6 +43,8 @@ class Dialog {
             connection.query(query, set, function (error, results, fields) {
                 console.log(error, results);
                 cb(results);
+                connection.release();
+
             });
             connection.on('error', function (err) {
                 console.log('onerror', err);
