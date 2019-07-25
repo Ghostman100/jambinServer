@@ -27,7 +27,7 @@ class Dialog {
         })
     }
 
-    static create(message, from, to, cb) {
+    static create(from, to, message, cb) {
         pool.getConnection((err, connection) => {
             if (err) {
                 connection.release();
