@@ -26,7 +26,7 @@ class User {
                 throw err;
             }
             connection.query('SELECT * from user where id=?', id, function (error, results, fields) {
-                // cb(results);
+                cb(results);
                 connection.release();
             });
             connection.on('error', function (err) {
