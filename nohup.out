@@ -1,0 +1,372 @@
+server is listening on 3000
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m2.135 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.722 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m8.913 ms - 1479882[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m1.375 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m1.529 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m3.208 ms - 1479882[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.807 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m27.322 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m6.910 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m4.838 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m4.250 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m3.693 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m3.689 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m5.017 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m3.387 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m3.071 ms - -[0m
+all
+(node:4077) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added. Use emitter.setMaxListeners() to increase limit
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m3.600 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m1.210 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.671 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m0.882 ms - 1479882[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.596 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.542 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m1.344 ms - 1479882[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m8.315 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m2.233 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m3.746 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m4.684 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m2.985 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m2.340 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m1.892 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m1.327 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m0.878 ms - 1479882[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.680 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.634 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m0.851 ms - 1479882[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m2.277 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m2.428 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m2.885 ms - 1479882[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m11.779 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m4.380 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m3.820 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m4.092 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m3.807 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m4.168 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m2.304 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.568 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.501 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m1.640 ms - 1479882[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.977 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.766 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m0.975 ms - 1479882[0m
+null OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 4,
+  serverStatus: 2,
+  warningCount: 1,
+  message: '',
+  protocol41: true,
+  changedRows: 0 }
+[0mPOST /users/create [32m200 [0m1347.524 ms - 29[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"},{"id":4,"name":"Максим","birthday":"1993-04-24T22:00:00.000Z","photoPath":"photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png","status":null,"about":"","sex":"m","preference":"f"}]
+[0mGET /users/all [32m200 [0m4.012 ms - 814[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [32m200 [0m1.058 ms - 247289[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [32m200 [0m1.241 ms - 396797[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [32m200 [0m1.279 ms - 269903[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m1.149 ms - 1479882[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [36m304 [0m0.641 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.524 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.756 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m1.157 ms - 1479882[0m
+{ NotFoundError: Not Found
+    at /home/railsrunner/jambinServer/app.js:28:8
+    at Layer.handle [as handle_request] (/home/railsrunner/jambinServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:317:13)
+    at /home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:275:10)
+    at /home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:635:15
+    at next (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:47:12) message: 'Not Found' }
+[0mGET /images/undefined [33m404 [0m473.539 ms - 1122[0m
+[{"id":4,"name":"Максим","birthday":"1993-04-24T22:00:00.000Z","sex":"m","preference":"f","about":"","status":null,"phoneNumber":"+79110017095","photoPath":"photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png"}]
+[0mGET /users/4 [32m200 [0m5.397 ms - 224[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [36m304 [0m0.777 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"},{"id":4,"name":"Максим","birthday":"1993-04-24T22:00:00.000Z","photoPath":"photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png","status":null,"about":"","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m4.246 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.698 ms - -[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [36m304 [0m0.523 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.475 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m1.188 ms - 1479882[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [36m304 [0m0.811 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.740 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.771 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m1.111 ms - 1479882[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"},{"id":4,"name":"Максим","birthday":"1993-04-24T22:00:00.000Z","photoPath":"photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png","status":null,"about":"","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m4.239 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.458 ms - -[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [36m304 [0m0.407 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.761 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m0.953 ms - 1479882[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"},{"id":4,"name":"Максим","birthday":"1993-04-24T22:00:00.000Z","photoPath":"photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png","status":null,"about":"","sex":"m","preference":"f"}]
+[0mGET /users/all [32m200 [0m4.210 ms - 814[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m1.051 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.523 ms - -[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [32m200 [0m1.650 ms - 269903[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m6.691 ms - -[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [36m304 [0m6.068 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m1.269 ms - 1479882[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [32m200 [0m0.937 ms - 396797[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m2.499 ms - 1479882[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"},{"id":4,"name":"Максим","birthday":"1993-04-24T22:00:00.000Z","photoPath":"photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png","status":null,"about":"","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m4.173 ms - -[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [36m304 [0m0.514 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.977 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.890 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m0.980 ms - 1479882[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.703 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.648 ms - -[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [36m304 [0m0.853 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m0.886 ms - 1479882[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [36m304 [0m0.768 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.619 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.767 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m3.175 ms - 1479882[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m1.403 ms - -[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [36m304 [0m1.484 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.829 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m1.035 ms - 1479882[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.726 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [32m200 [0m1.522 ms - 247289[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [32m200 [0m1.414 ms - 269903[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m1.417 ms - 1479882[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m0.400 ms - -[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [36m304 [0m0.420 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.415 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m0.764 ms - 1479882[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"},{"id":4,"name":"Максим","birthday":"1993-04-24T22:00:00.000Z","photoPath":"photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png","status":null,"about":"","sex":"m","preference":"f"}]
+[0mGET /users/all [32m200 [0m4.003 ms - 814[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [32m200 [0m1.157 ms - 269903[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"},{"id":4,"name":"Максим","birthday":"1993-04-24T22:00:00.000Z","photoPath":"photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png","status":null,"about":"","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m2.757 ms - -[0m
+[{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","sex":"m","preference":"f","about":"","status":null,"phoneNumber":"+79994658617","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg"}]
+[0mGET /users/1 [36m304 [0m3.694 ms - -[0m
+{ NotFoundError: Not Found
+    at /home/railsrunner/jambinServer/app.js:28:8
+    at Layer.handle [as handle_request] (/home/railsrunner/jambinServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:317:13)
+    at /home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:275:10)
+    at /home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:635:15
+    at next (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:47:12) message: 'Not Found' }
+[0mGET /images/undefined [33m404 [0m32.497 ms - 1122[0m
+null OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 5,
+  serverStatus: 2,
+  warningCount: 1,
+  message: '',
+  protocol41: true,
+  changedRows: 0 }
+[0mPOST /users/create [32m200 [0m11699.993 ms - 29[0m
+{ NotFoundError: Not Found
+    at /home/railsrunner/jambinServer/app.js:28:8
+    at Layer.handle [as handle_request] (/home/railsrunner/jambinServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:317:13)
+    at /home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:275:10)
+    at /home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:635:15
+    at next (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:47:12) message: 'Not Found' }
+[0mGET /images/undefined [33m404 [0m22.275 ms - 1122[0m
+[{"id":5,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","sex":"m","preference":"f","about":"Гена пидр","status":null,"phoneNumber":"+79137502716","photoPath":"photo_1564061860709_c12d6a46-0158-48da-b63a-2ac27187061a.jpg"}]
+[0mGET /users/5 [32m200 [0m25.553 ms - 237[0m
+null OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 6,
+  serverStatus: 2,
+  warningCount: 1,
+  message: '',
+  protocol41: true,
+  changedRows: 0 }
+[0mPOST /users/create [32m200 [0m27813.283 ms - 29[0m
+null OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 7,
+  serverStatus: 2,
+  warningCount: 1,
+  message: '',
+  protocol41: true,
+  changedRows: 0 }
+[0mPOST /users/create [32m200 [0m33266.449 ms - 29[0m
+null OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 8,
+  serverStatus: 2,
+  warningCount: 1,
+  message: '',
+  protocol41: true,
+  changedRows: 0 }
+[0mPOST /users/create [32m200 [0m31299.032 ms - 29[0m
+null OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 9,
+  serverStatus: 2,
+  warningCount: 1,
+  message: '',
+  protocol41: true,
+  changedRows: 0 }
+[0mPOST /users/create [32m200 [0m27487.112 ms - 29[0m
+[0mGET /images/photo_1564061860709_c12d6a46-0158-48da-b63a-2ac27187061a.jpg [32m200 [0m1.113 ms - 5447936[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"},{"id":4,"name":"Максим","birthday":"1993-04-24T22:00:00.000Z","photoPath":"photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png","status":null,"about":"","sex":"m","preference":"f"},{"id":5,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061860709_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"},{"id":6,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061873445_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"},{"id":7,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061868003_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"},{"id":8,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061871260_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"},{"id":9,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061875934_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"}]
+[0mGET /users/all [32m200 [0m7.713 ms - 1859[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [32m200 [0m1.643 ms - 247289[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [32m200 [0m1.132 ms - 269903[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [32m200 [0m1.151 ms - 396797[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m1.039 ms - 1479882[0m
+[0mGET /images/photo_1564061875934_c12d6a46-0158-48da-b63a-2ac27187061a.jpg [32m200 [0m1.437 ms - 5447936[0m
+[0mGET /images/photo_1564061873445_c12d6a46-0158-48da-b63a-2ac27187061a.jpg [32m200 [0m0.988 ms - 5447936[0m
+[0mGET /images/photo_1564061868003_c12d6a46-0158-48da-b63a-2ac27187061a.jpg [32m200 [0m1.375 ms - 5447936[0m
+[0mGET /images/photo_1564061871260_c12d6a46-0158-48da-b63a-2ac27187061a.jpg [32m200 [0m1.004 ms - 5447936[0m
+[0mGET /images/photo_1564061860709_c12d6a46-0158-48da-b63a-2ac27187061a.jpg [32m200 [0m0.871 ms - 5447936[0m
+[0mGET /images/photo_1564061875934_c12d6a46-0158-48da-b63a-2ac27187061a.jpg [32m200 [0m1.006 ms - 5447936[0m
+/home/railsrunner/jambinServer/models/user.js:16
+                throw err;
+                ^
+
+Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/railsrunner/jambinServer/node_modules/mysql/lib/protocol/Protocol.js:112:13)
+    at Socket.<anonymous> (/home/railsrunner/jambinServer/node_modules/mysql/lib/Connection.js:97:28)
+    at Socket.<anonymous> (/home/railsrunner/jambinServer/node_modules/mysql/lib/Connection.js:525:10)
+    at emitNone (events.js:111:20)
+    at Socket.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1064:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+server is listening on 3000
+{ NotFoundError: Not Found
+    at /home/railsrunner/jambinServer/app.js:28:8
+    at Layer.handle [as handle_request] (/home/railsrunner/jambinServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:317:13)
+    at /home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:275:10)
+    at /home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:635:15
+    at next (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:47:12) message: 'Not Found' }
+[0mGET /images/undefined [33m404 [0m454.665 ms - 1122[0m
+{ NotFoundError: Not Found
+    at /home/railsrunner/jambinServer/app.js:28:8
+    at Layer.handle [as handle_request] (/home/railsrunner/jambinServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:317:13)
+    at /home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:275:10)
+    at /home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:635:15
+    at next (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:47:12) message: 'Not Found' }
+[0mGET /images/undefined [33m404 [0m27.602 ms - 1122[0m
+[]
+[0mGET /users/%7B%22id%22:3,%22key%22:%22Joel%22,%22img%22:%224.jpg%22%7D [32m200 [0m16.395 ms - -[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"},{"id":4,"name":"Максим","birthday":"1993-04-24T22:00:00.000Z","photoPath":"photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png","status":null,"about":"","sex":"m","preference":"f"},{"id":5,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061860709_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"},{"id":6,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061873445_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"},{"id":7,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061868003_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"},{"id":8,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061871260_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"},{"id":9,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061875934_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"}]
+[0mGET /users/all [36m304 [0m6.797 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [32m200 [0m7.092 ms - 396797[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [32m200 [0m5.358 ms - 247289[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [32m200 [0m3.259 ms - 269903[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [32m200 [0m7.143 ms - 1479882[0m
+[0mGET /images/photo_1564061873445_c12d6a46-0158-48da-b63a-2ac27187061a.jpg [32m200 [0m2.810 ms - 5447936[0m
+{ NotFoundError: Not Found
+    at /home/railsrunner/jambinServer/app.js:28:8
+    at Layer.handle [as handle_request] (/home/railsrunner/jambinServer/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:317:13)
+    at /home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:275:10)
+    at /home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:635:15
+    at next (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:174:3)
+    at router (/home/railsrunner/jambinServer/node_modules/express/lib/router/index.js:47:12) message: 'Not Found' }
+[0mGET /images/undefined [33m404 [0m21.431 ms - 1122[0m
+server is listening on 3000
+null OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 10,
+  serverStatus: 2,
+  warningCount: 1,
+  message: '',
+  protocol41: true,
+  changedRows: 0 }
+[0mPOST /users/create [32m200 [0m1865.413 ms - 30[0m
+all
+router [{"id":1,"name":"Джейк","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":2,"name":"Вовоаоао","birthday":"1985-07-24T22:00:00.000Z","photoPath":"photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg","status":null,"about":"","sex":"m","preference":"f"},{"id":3,"name":"Ромасяо","birthday":"1978-12-24T23:00:00.000Z","photoPath":"photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg","status":null,"about":"Полипропилен ","sex":"m","preference":"f"},{"id":4,"name":"Максим","birthday":"1993-04-24T22:00:00.000Z","photoPath":"photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png","status":null,"about":"","sex":"m","preference":"f"},{"id":5,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061860709_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"},{"id":6,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061873445_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"},{"id":7,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061868003_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"},{"id":8,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061871260_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"},{"id":9,"name":"Макс","birthday":"2001-07-24T22:00:00.000Z","photoPath":"photo_1564061875934_c12d6a46-0158-48da-b63a-2ac27187061a.jpg","status":null,"about":"Гена пидр","sex":"m","preference":"f"},{"id":10,"name":"Макс","birthday":"2001-07-28T22:00:00.000Z","photoPath":"photo_1564386430853_6f4e811c-df87-44be-b144-9ad2229297d7.jpg","status":null,"about":"","sex":"m","preference":"f"}]
+[0mGET /users/all [32m200 [0m11.012 ms - 2052[0m
+[0mGET /images/photo_1564061860709_c12d6a46-0158-48da-b63a-2ac27187061a.jpg [36m304 [0m4.711 ms - -[0m
+[0mGET /images/photo_1564046331092_fc27c00f-d5cf-4469-94fa-bbb0490c20e9.jpg [36m304 [0m4.463 ms - -[0m
+[0mGET /images/photo_1564055926384_5362B679-3E81-4B7C-9D19-5CB7C449F791.png [36m304 [0m4.211 ms - -[0m
+[0mGET /images/photo_1564048575477_D73F0D10-5F29-496B-A4F8-8FBE2CD32805.jpg [36m304 [0m0.693 ms - -[0m
+[0mGET /images/photo_1564048459684_8D18D07B-D236-4089-A9D3-1BAD5F37A926.jpg [36m304 [0m0.655 ms - -[0m
+[0mGET /images/photo_1564061868003_c12d6a46-0158-48da-b63a-2ac27187061a.jpg [36m304 [0m0.482 ms - -[0m
+[0mGET /images/photo_1564386430853_6f4e811c-df87-44be-b144-9ad2229297d7.jpg [32m200 [0m3.682 ms - 4947923[0m
+server is listening on 3000

@@ -1,0 +1,44 @@
+received: {"method":"connect","connectTo":6,"id":"9"}
+null []
+received: {"method":"message","text":"Прив"}
+null OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 24,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0 }
+received: {"method":"message","text":"Как дела?"}
+null OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 25,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0 }
+received: {"method":"message","text":"Что делаешь?"}
+null OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 26,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0 }
+received: {"method":"connect","connectTo":1,"id":"9"}
+null []
+received: {"method":"message","text":"Хаюхай"}
+null OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 27,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0 }

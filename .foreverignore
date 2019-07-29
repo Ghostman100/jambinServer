@@ -1,0 +1,6 @@
+*.log
+public/**/*
+*.png
+*.jpg
+node_modules/**/*
+.idea/*
