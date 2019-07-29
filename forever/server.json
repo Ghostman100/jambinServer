@@ -1,0 +1,10 @@
+{
+  "uid": "server",
+  "append": true,
+  "watch": true,
+  "script": "app.js",
+  "sourceDir": "/home/railsrunner/jambinServer",
+  "logFile": "/home/railsrunner/jambinServer/logs/forever.log",
+  "outFile": "/home/railsrunner/jambinServer/logs/out.log",
+  "errFile": "/home/railsrunner/jambinServer/logs/error.log"
+}
