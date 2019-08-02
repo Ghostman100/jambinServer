@@ -1,5 +1,5 @@
 var pool = require('../database');
-
+var db = require('../pool');
 
 class Dialog {
 
@@ -51,6 +51,11 @@ class Dialog {
                 return;
             });
         })
+    }
+
+    static getDialogs(user_id, cb) {
+        // let query = 'SELECT * from messages where id in (SELECT DISTINCT id from messages where  '
+        // db.query(query, user_id, cb)
     }
 
 }

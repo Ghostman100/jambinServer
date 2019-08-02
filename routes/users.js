@@ -32,16 +32,23 @@ router.post('/create', upload.single('photo'), function (req, res, next) {
 });
 
 router.get('/all', function (req, res, next) {
-    console.log('all');
+    // console.log('all');
     Users.all((users) => {
-        console.log('router', JSON.stringify(users));
+        // console.log('router', JSON.stringify(users));
         res.status(200).json(users)
+    })
+});
+
+router.get('/sympathy/:id', function (req, res, next) {
+    Users.find(req.params.id, (user) => {
+        // console.log(JSON.stringify(user));
+        res.status(200).json(user[0])
     })
 });
 
 router.get('/:id', function (req, res, next) {
     Users.find(req.params.id, (user) => {
-        console.log(JSON.stringify(user));
+        // console.log(JSON.stringify(user));
         res.status(200).json(user[0])
     })
 });

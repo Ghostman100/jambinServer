@@ -1,4 +1,5 @@
 var pool = require('../database');
+var db = require('../pool');
 
 class User {
     static create(params, cb) {
@@ -8,7 +9,7 @@ class User {
                 throw err;
             }
         connection.query('INSERT INTO user SET ?', params, function (error, results, fields) {
-            console.log(error, results);
+            // console.log(error, results);
             cb(results.insertId);
             connection.release();
         });
@@ -54,6 +55,7 @@ class User {
             });
         });
     }
+
 }
 
 module.exports = User;
