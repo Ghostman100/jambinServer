@@ -9,7 +9,7 @@ class User {
                 throw err;
             }
         connection.query('INSERT INTO user SET ?', params, function (error, results, fields) {
-            // console.log(error, results);
+            console.log(error, results);
             cb(results.insertId);
             connection.release();
         });

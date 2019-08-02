@@ -7,13 +7,58 @@ class Likes {
     }
 
     static dislike(params, cb) {
-        const query = 'DELETE FROM likes  where sender_id=' + params.sender_id + ' and recipient_ip=' + params.recipient_id;
+        const query = 'DELETE FROM likes  where sender_id=' + params.sender_id + ' and recipient_id=' + params.recipient_id;
         db.query(query, params, cb)
     }
 
-    static myLikes(params, cb) {
+    static myLikes(params) {
         const query = 'SELECT recipient_id from likes where sender_id=?';
-        db.query(query, params, cb)
+        return (new Promise(resolve => {
+                    db.query(query, params, (ids, err) => {
+                        if (err) {
+                            console.log(err)
+                        } else {
+                            let ar = ids.map((id) => {
+                                return (id.recipient_id)
+                            });
+                            resolve(ar)
+                        }
+                    });
+
+                }
+            )
+        )
+    }
+
+    static likesMe(params) {
+        const query = 'SELECT * from user where id in (SELECT sender_id from likes where recipient_id=?)';
+        return (new Promise((resolve => {
+                db.query(query, params, (users, err) => {
+                    if (err) {
+                        console.log(err)
+                    } else {
+                       resolve(users)
+                    }
+                })
+            })
+        ))
+    }
+
+    static commonLikes(params) {
+        const a = 'SELECT sender_id from likes where recipient_id=' + params;
+        const b = 'SELECT recipient_id from likes where sender_id=' + params + ' and recipient_id in (' + a + ')';
+        const query = 'SELECT * from user where id in (' + b + ')';
+
+        return (new Promise((resolve => {
+                db.query(query, params, (users, err) => {
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        resolve(users)
+                    }
+                })
+            })
+        ))
     }
 }
 

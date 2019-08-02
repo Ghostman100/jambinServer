@@ -2,6 +2,8 @@ const pool = require('../database');
 
 
 pool.getConnection(function (err, connection) {
+    if (err)
+        console.log(err);
     let createLikes = 'CREATE TABLE likes (' +
         'id int NOT NULL AUTO_INCREMENT,' +
         'sender_id int,' +
