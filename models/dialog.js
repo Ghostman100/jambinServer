@@ -53,9 +53,39 @@ class Dialog {
         })
     }
 
-    static getDialogs(user_id, cb) {
-        // let query = 'SELECT * from messages where id in (SELECT DISTINCT id from messages where  '
-        // db.query(query, user_id, cb)
+    static getDialogs(user_id) {
+        let query = 'SELECT ' +
+            'messages.*, user.id as user_id, user.name, user.photoPath ' +
+            'FROM ' +
+            'messages, user ' +
+            'WHERE ' +
+            'messages.id IN ( ' +
+            '    SELECT ' +
+            'MAX(id) ' +
+            'FROM ' +
+            '(SELECT ' +
+            'IF(m.sender_id =' + user_id + ', m.recipient_id, m.sender_id) as other_user_id, ' +
+            '    m.id ' +
+            'FROM ' +
+            'messages m ' +
+            'WHERE ' +
+            'm.recipient_id = ' + user_id + ' OR m.sender_id = ' + user_id + ') me ' +
+            'GROUP BY ' +
+            'other_user_id ' +
+            ') ' +
+            'and user.id = IF(messages.sender_id = ' + user_id + ', messages.recipient_id, messages.sender_id) ' +
+            'ORDER BY ' +
+            'messages.id DESC';
+        return (new Promise((resolve => {
+                db.query(query, user_id, (users, err) => {
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        resolve(users)
+                    }
+                })
+            })
+        ))
     }
 
 }
