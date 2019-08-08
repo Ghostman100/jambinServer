@@ -46,11 +46,19 @@ router.get('/sympathy/:id', function (req, res, next) {
     })
 });
 
+router.put('/:id', function (req, res, next) {
+    Users.update(req.params.id, (user) => {
+            console.log(JSON.stringify(user));
+            res.status(200)
+        })
+});
+
 router.get('/:id', function (req, res, next) {
     Users.find(req.params.id, (user) => {
-        // console.log(JSON.stringify(user));
+        console.log(JSON.stringify(user));
         res.status(200).json(user[0])
-    })
+    },
+        (err) => res.status(400))
 });
 
 

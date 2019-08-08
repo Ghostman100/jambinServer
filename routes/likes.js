@@ -60,6 +60,25 @@ router.get('/commonlikes/:id', function (req, res, next) {
         );
 });
 
+router.get('/likesize/:id', function (req, res, next) {
+    // let body = JSON.parse(JSON.stringify(req.body));
+    // console.log('id', req.params.id);
+    Likes.commonLikes(req.params.id)
+        .then((commonLikes) => {
+            Likes.likesMe(req.params.id)
+                .then((likes) => {
+                    console.log('likes', JSON.stringify(likes));
+                    res.status(200).json({
+                        message: 'success!',
+                        likes: JSON.stringify(likes.length),
+                        commonLikes: JSON.stringify(commonLikes.length)
+                    })
+                })
+
+            }
+        );
+});
+
 router.get('/:id', function (req, res, next) {
     // let body = JSON.parse(JSON.stringify(req.body));
     // console.log('id', req.params.id);

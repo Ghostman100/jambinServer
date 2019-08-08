@@ -20,10 +20,25 @@ class User {
         });
     }
 
-    static find(id, cb) {
+    static update(id, params) {
+        const query = 'UPDATE user set ? where id=' + id;
+        return (new Promise((resolve => {
+                db.query(query, params, (user, err) => {
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        resolve(user)
+                    }
+                })
+            })
+        ))
+    }
+
+    static find(id, cb, errorCb) {
         pool.getConnection(function (err, connection) {
             if (err) {
                 connection.release();
+                errorCb(err);
                 throw err;
             }
             connection.query('SELECT * from user where id=?', id, function (error, results, fields) {
@@ -31,8 +46,8 @@ class User {
                 connection.release();
             });
             connection.on('error', function (err) {
+                errorCb(err);
                 throw err;
-                return;
             });
         });
 
