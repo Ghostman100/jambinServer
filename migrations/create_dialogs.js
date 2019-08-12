@@ -22,4 +22,5 @@ pool.getConnection(function (err, connection) {
         // When done with the connection, release it.
         console.log(error, results, fields);
     });
+    connection.release();
 });

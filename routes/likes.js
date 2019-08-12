@@ -37,7 +37,7 @@ router.get('/mylikes/:id', function (req, res, next) {
     // console.log('id', req.params.id);
     Likes.myLikes(req.params.id)
         .then((likes) => {
-                console.log('likes', JSON.stringify(likes));
+                // console.log('likes', JSON.stringify(likes));
                 res.status(200).json({
                     message: 'success!',
                     likes: JSON.stringify(likes)
