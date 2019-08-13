@@ -7,7 +7,7 @@ router.post('/like', function (req, res, next) {
     console.log(typeof req.body);
     Likes.like(req.body, (r, err) => {
         if (!err) {
-            console.log(r);
+            // console.log(r);
             res.status(200).json({
                 message: 'success!',
                 recipient_id: req.body.recipient_id
@@ -51,7 +51,7 @@ router.get('/commonlikes/:id', function (req, res, next) {
     // console.log('id', req.params.id);
     Likes.commonLikes(req.params.id)
         .then((likes) => {
-                console.log('likes', JSON.stringify(likes));
+                // console.log('likes', JSON.stringify(likes));
                 res.status(200).json({
                     message: 'success!',
                     likes: JSON.stringify(likes)
@@ -67,7 +67,7 @@ router.get('/likesize/:id', function (req, res, next) {
         .then((commonLikes) => {
             Likes.likesMe(req.params.id)
                 .then((likes) => {
-                    console.log('likes', JSON.stringify(likes));
+                    // console.log('likes', JSON.stringify(likes));
                     res.status(200).json({
                         message: 'success!',
                         likes: JSON.stringify(likes.length),
