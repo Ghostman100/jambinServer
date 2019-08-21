@@ -7,7 +7,20 @@ router.get('/all', function (req, res, next) {
         .then((places) => {
             console.log('places', JSON.stringify(places));
             res.status(200).json(JSON.stringify(places))
-        } )
+        })
+});
+
+router.post('/create', function (req, res, next) {
+    // let body = JSON.parse(JSON.stringify(req.body));
+    console.log(req.body);
+    Places.create(req.body)
+        .then((places) => {
+            console.log('places', JSON.stringify(places));
+            res.status(200).json({
+                message: 'success!'
+            })
+        })
+        .catch(() => res.status(500))
 });
 
 module.exports = router;
