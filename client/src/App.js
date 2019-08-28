@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BeatLoader } from 'react-spinners';
+import {BeatLoader} from 'react-spinners';
 import {YMaps, Map, Placemark} from 'react-yandex-maps';
 
 const APIKEY = '8534aa25-b7df-46a1-bebf-2ffeb6df1814';
@@ -16,6 +16,16 @@ class App extends React.Component {
             name: 'аптеки',
             checkCounter: 0,
             selected: [],
+            bounds: [
+                [
+                    54.800912,
+                    82.925056,
+                ],
+                [
+                    54.913717,
+                    83.146464,
+                ]
+            ]
         };
         this.handleSearch = this.handleSearch.bind(this);
         this.handleCheck = this.handleCheck.bind(this);
@@ -31,6 +41,14 @@ class App extends React.Component {
                 return (response.features[0].properties.boundedBy)
             })
             .then((bounds) => {
+                this.setState({
+                    bounds: [[
+                        bounds[0][1], bounds[0][0]
+                    ],
+                        [
+                            bounds[1][1], bounds[1][0]
+                        ]]
+                });
                 console.log('https://search-maps.yandex.ru/v1/?text=' + text + '&type=biz&rspn=1&bbox=' + `${bounds[0][0]},${bounds[0][1]}~${bounds[1][0]},${bounds[1][1]}` + '&results=50&lang=ru_RU&apikey=' + APIKEY);
                 fetch('https://search-maps.yandex.ru/v1/?text=' + text + '&type=biz&rspn=1&bbox=' + `${bounds[0][0]},${bounds[0][1]}~${bounds[1][0]},${bounds[1][1]}` + '&results=50&lang=ru_RU&apikey=' + APIKEY)
                     .then((res) => res.json())
@@ -125,7 +143,6 @@ class App extends React.Component {
         });
         let formData = new FormData();
         formData.append('places', body);
-        console.log(formData);
         fetch('/places/create', {
             method: "POST",
             headers: {
@@ -136,7 +153,6 @@ class App extends React.Component {
         })
             .then(res => res.json())
             .then((response) => {
-                console.log(response);
                 this.setState({
                     process: false,
                     // places: this.state.places,
@@ -155,7 +171,6 @@ class App extends React.Component {
     }
 
     render() {
-        console.log(this.state.selected);
         return (
             <div style={{flex: 1, height: '100%', borderWidth: 10, borderColor: 'red'}}>
                 <form>
@@ -177,18 +192,7 @@ class App extends React.Component {
                         <Map
                             width={'100%'}
                             height={400}
-                            defaultState={{
-                                bounds: [
-                                    [
-                                        54.800912,
-                                        82.925056,
-                                    ],
-                                    [
-                                        54.913717,
-                                        83.146464,
-                                    ]
-                                ]
-                            }}
+                            state={this.state}
                         >
                             {this.state.places && this.state.places.map((place) => place.marker)}
                         </Map>
@@ -214,7 +218,7 @@ class App extends React.Component {
                     </tr>
                     {this.state.places && this.state.places.map((place) => place.list)}
                     </tbody>
-                </table> }
+                </table>}
             </div>)
     }
 }
