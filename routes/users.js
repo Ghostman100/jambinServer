@@ -70,10 +70,13 @@ router.get('/sympathy/:id', function (req, res, next) {
 });
 
 router.put('/:id', function (req, res, next) {
-    Users.update(req.params.id, (user) => {
-        console.log(JSON.stringify(user));
-        res.status(200)
-    })
+    console.log(req.body);
+    Users.update(req.params.id, req.body)
+        .then((profile) => {
+            res.status(200).json({
+                status: "success"
+            })
+        })
 });
 
 router.get('/:id', function (req, res, next) {

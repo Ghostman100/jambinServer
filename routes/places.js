@@ -10,6 +10,14 @@ router.get('/all', function (req, res, next) {
         })
 });
 
+router.get('', (req, res) => {
+    console.log(req.query);
+   Places.findByPlace({latitude: req.query.latitude, longitude: req.query.longitude})
+       .then((places) => {
+           console.log('places', JSON.stringify(places));
+           res.status(200).json(JSON.stringify(places))
+       })});
+
 router.post('/create', function (req, res, next) {
     // let body = JSON.parse(JSON.stringify(req.body));
     console.log(req.body);

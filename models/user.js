@@ -34,6 +34,7 @@ class User {
         ))
     }
 
+
     static find(id, cb, errorCb) {
         pool.getConnection(function (err, connection) {
             if (err) {
