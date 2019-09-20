@@ -14,5 +14,14 @@ router.get('/:id', function (req, res, next) {
         })
 });
 
+router.post('/delete', function (req, res, next) {
+   Dialog.deleteDialog(req.body.id1, req.body.id2)
+       .then(() => {
+           res.status(200).json({
+               message: 'success!'
+           })
+       })
+});
+
 
 module.exports = router;

@@ -53,6 +53,21 @@ class Dialog {
         })
     }
 
+    static deleteDialog(id1, id2) {
+        let query = 'DELETE from messages ' +
+            `WHERE ((sender_id = ${id1} AND recipient_id = ${id2}) OR (sender_id = ${id2} AND recipient_id = ${id1}))`;
+        return (new Promise((resolve => {
+                db.query(query, null, (status, err) => {
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        resolve()
+                    }
+                })
+            })
+        ))
+    }
+
     static getDialogs(user_id) {
         let query = 'SELECT ' +
             'messages.*, user.id as user_id, user.name, user.photoPath ' +
