@@ -20,7 +20,7 @@ router.get('', (req, res) => {
 
 router.post('/create', function (req, res, next) {
     // let body = JSON.parse(JSON.stringify(req.body));
-    console.log(req.body);
+    // console.log(req.body);
     Places.create(req.body)
         .then((places) => {
             console.log('places', JSON.stringify(places));

@@ -32,6 +32,34 @@ router.post('/create', upload.single('photo'), function (req, res, next) {
 
 });
 
+router.post('/photo/delete', (req, res, next) => {
+    Photos.delete(req.body.id)
+        .then(() => {
+            res.status(200).json({
+                status: "success"
+            })
+        })
+});
+
+router.post('/photo/delete_main', (req, res, next) => {
+    Photos.deleteMain(req.body.id)
+        .then(() => {
+            res.status(200).json({
+                status: "success"
+            })
+        })
+
+});
+
+router.post('/photo/make_main', (req, res, next) => {
+    Photos.makeMain(req.body)
+        .then(() => {
+            res.status(200).json({
+                status: "success"
+            })
+        })
+});
+
 router.post('/photo', upload.single('photo'), function (req, res, next) {
     let body = JSON.parse(JSON.stringify(req.body));
     body['path'] = req.file.filename;
@@ -57,9 +85,9 @@ router.get('/all', function (req, res, next) {
 router.get('/photo/:id', function (req, res, next) {
     Photos.find(req.params.id)
         .then((photos) => {
-        // console.log(JSON.stringify(user));
-        res.status(200).json(photos)
-    })
+            // console.log(JSON.stringify(user));
+            res.status(200).json(photos)
+        })
 });
 
 router.get('/sympathy/:id', function (req, res, next) {

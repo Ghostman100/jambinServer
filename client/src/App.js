@@ -16,6 +16,9 @@ class App extends React.Component {
             city: 'Новосибирск',
             address: 'Советский район',
             name: 'аптеки',
+            house: '',
+            street: '',
+            housing: '',
             checkCounter: 0,
             selected: [],
             bounds: [
@@ -35,7 +38,7 @@ class App extends React.Component {
     }
 
     handleSearch(city, address, text) {
-        fetch('https://search-maps.yandex.ru/v1/?text=' + city + address + '&type=geo&results=1&lang=ru_RU&apikey=' + APIKEY)
+        fetch('https://search-maps.yandex.ru/v1/?text=' + city + address + this.state.street + this.state.house + '&type=geo&results=1&lang=ru_RU&apikey=' + APIKEY)
             .then((res) => res.json())
             .then((response) => {
                 console.log(response.features[0].properties.boundedBy);
@@ -221,31 +224,37 @@ class App extends React.Component {
                                                          onChange={(event) => this.setState({address: event.target.value})}/>
                                         </div>
 
-                                        {/*<div className="form-item">*/}
-                                        {/*    <div className="filter-item">Улица</div>*/}
-                                        {/*    <select name="street">*/}
-                                        {/*        <option value="1">Большой проспект П.С.</option>*/}
-                                        {/*        <option value="2">Ленина</option>*/}
-                                        {/*    </select>*/}
-                                        {/*</div>*/}
+                                        <div className="form-item">
+                                            <div>Улица</div>
+                                            <input type={'text'} value={this.state.street}
+                                                   onChange={(event) => this.setState({street: event.target.value})}/>
+                                            {/*<select name="street">*/}
+                                            {/*    <option value="1">Большой проспект П.С.</option>*/}
+                                            {/*    <option value="2">Ленина</option>*/}
+                                            {/*</select>*/}
+                                        </div>
 
-                                        {/*<div className="form-row">*/}
-                                        {/*    <div className="form-item">*/}
-                                        {/*        <div className="filter-item">Дом</div>*/}
-                                        {/*        <select name="house">*/}
-                                        {/*            <option value="1">1</option>*/}
-                                        {/*            <option value="2">2</option>*/}
-                                        {/*        </select>*/}
-                                        {/*    </div>*/}
+                                        <div className="form-row">
+                                            <div className="form-item">
+                                                <div>Дом</div>
+                                                <input type={'text'} value={this.state.house}
+                                                       onChange={(event) => this.setState({house: event.target.value})}/>
+                                                {/*<select name="house">*/}
+                                                {/*    <option value="1">1</option>*/}
+                                                {/*    <option value="2">2</option>*/}
+                                                {/*</select>*/}
+                                            </div>
 
-                                        {/*    <div className="form-item">*/}
-                                        {/*        <div className="filter-item">Корпус</div>*/}
-                                        {/*        <select name="housing">*/}
-                                        {/*            <option value="1">1</option>*/}
-                                        {/*            <option value="2">2</option>*/}
-                                        {/*        </select>*/}
-                                        {/*    </div>*/}
-                                        {/*</div>*/}
+                                            <div className="form-item">
+                                                <div>Корпус</div>
+                                                <input type={'text'} value={this.state.housing}
+                                                       onChange={(event) => this.setState({housing: event.target.value})}/>
+                                                {/*<select name="housing">*/}
+                                                {/*    <option value="1">1</option>*/}
+                                                {/*    <option value="2">2</option>*/}
+                                                {/*</select>*/}
+                                            </div>
+                                        </div>
 
                                         <div className="form-item">
                                             <div >Тип заведения</div>
