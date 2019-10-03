@@ -53,13 +53,28 @@ class User {
 
     }
 
+    static search(params) {
+        console.log(params);
+        const query = "SELECT * FROM user where name like '%" + params + "%' OR phoneNumber like '%" + params + "%'";
+        return (new Promise((resolve => {
+                db.query(query, params, (users, err) => {
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        resolve(users)
+                    }
+                })
+            })
+        ))
+    }
+
     static all(cb) {
         pool.getConnection(function (err, connection) {
             if (err) {
                 connection.release();
                 throw err;
             }
-            connection.query('SELECT id, name, birthday, photoPath, status, about, sex, preference from user', function (error, results, fields) {
+            connection.query('SELECT id, name, birthday, phoneNumber, photoPath, status, about, sex, preference, updated_at from user', function (error, results, fields) {
                 // console.log(error, results);
                 cb(results);
                 connection.release();

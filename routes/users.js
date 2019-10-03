@@ -32,6 +32,15 @@ router.post('/create', upload.single('photo'), function (req, res, next) {
 
 });
 
+router.get('/search', (req, res, next) => {
+    console.log(req.query);
+    Users.search(req.query.q)
+        .then((users) => {
+                res.status(200).json(users)
+            }
+        )
+});
+
 router.post('/photo/delete', (req, res, next) => {
     Photos.delete(req.body.id)
         .then(() => {
