@@ -14,6 +14,7 @@ class AddPlaceScreen extends React.Component {
         this.state = {
             process: false,
             city: 'Новосибирск',
+            addedType: 'add',
             address: 'Советский район',
             name: 'аптеки',
             house: '',
@@ -68,7 +69,7 @@ class AddPlaceScreen extends React.Component {
                                             key={index}
                                             geometry={place.geometry.coordinates.reverse()}
                                             properties={{
-                                                hintContent: "<h3>place.properties.CompanyMetaData.address</h3>"
+                                                // hintContent: "<h3>place.properties.CompanyMetaData.address</h3>"
                                                 // iconCaption: place.properties.CompanyMetaData.name
                                             }}
                                             defaultOptions={{
@@ -124,6 +125,85 @@ class AddPlaceScreen extends React.Component {
         }
     }
 
+    changeType = (type) => {
+        if (type === 'add') {
+            this.setState({
+                checkCounter: 0,
+                selected: [],
+                places: [],
+                addedType: 'add'
+            })
+        } else {
+            fetch('/places/all')
+                .then(res => res.json())
+                .then(places => {
+                    return (places.map((place, index) => {
+                        return ({
+                                id: place.id,
+                                marker: <Placemark
+                                    // onClick={() => console.log('placeMark')}
+                                    key={index}
+                                    geometry={[place.latitude, place.longitude]}
+                                    properties={{
+                                        // hintContent: "<h3>place.properties.CompanyMetaData.address</h3>"
+                                        // iconCaption: place.properties.CompanyMetaData.name
+                                    }}
+                                    defaultOptions={{
+                                        preset: 'islands#blueCircleDotIcon',
+                                        openEmptyHint: true,
+                                        hasHint: true
+                                    }}
+                                />,
+                                list:
+                                    <tr id={place.id} key={place.id}>
+                                        <td className="result-check"><label><input type="checkbox"
+                                                                                   onChange={this.handleCheck}
+                                                                                   name={index}/><span></span></label>
+                                        </td>
+                                        <td className="result-name">{place.name}</td>
+                                        <td className="result-type">{place.kind}</td>
+                                        <td className="result-city">{place.city}</td>
+                                        <td className="result-street">{place.address}
+                                        </td>
+                                        {/*<td className="result-house">82</td>*/}
+                                        {/*<td className="result-housing">-</td>*/}
+                                    </tr>
+                            }
+
+                        )
+                    }))
+                })
+                .then((places => {
+                    this.setState({
+                        checkCounter: 0,
+                        selected: [],
+                        places,
+                        addedType: 'added',
+                    })
+                }))
+        }
+    };
+    handleDelete = () => {
+        let body = this.state.selected.map((index) => {
+            let place = this.state.places[index];
+            console.log(place.list);
+            return (place.list.props.id)
+        });
+        console.log(body);
+        fetch('/places/delete', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+            },
+            body: JSON.stringify(body)
+        })
+            .then(res => res.json())
+            .then((result) => {
+                this.changeType('added')
+            })
+    };
+
     handleSubmit(event) {
         this.setState({process: true});
         let body = this.state.selected.map((index) => {
@@ -177,8 +257,16 @@ class AddPlaceScreen extends React.Component {
                                 <form action="/">
 
                                     <div className="filter-btns">
-                                        <button className="add-btn" type="button">Добавить</button>
-                                        <button className="added-btn" type="button">Добавленные</button>
+                                        <button className={this.state.addedType === 'add' ? 'add-btn' : 'added-btn'}
+                                                type="button"
+                                                onClick={() => this.changeType('add')}
+                                        >Добавить
+                                        </button>
+                                        <button className={this.state.addedType !== 'add' ? 'add-btn' : 'added-btn'}
+                                                type="button"
+                                                onClick={() => this.changeType('added')}
+                                        >Добавленные
+                                        </button>
                                     </div>
 
                                     <div className="form-title">Фильтр поиска мест</div>
@@ -242,9 +330,15 @@ class AddPlaceScreen extends React.Component {
                                 <div
                                     className="result-filter_txt">Выбрано <span>{this.state.checkCounter}</span> объектов
                                 </div>
-                                <button className="btn btn-blue" type="button"
-                                        onClick={this.handleSubmit}>Добавить
-                                </button>
+                                {this.state.addedType === 'add' ? <button className="btn btn-blue" type="button"
+                                                                          onClick={this.handleSubmit}>Добавить
+                                    </button> :
+                                    <button className="btn btn-delete"
+                                            type="button"
+                                            onClick={this.handleDelete}
+                                    >Удалить</button>
+
+                                }
                             </div>
                         </div>
                         <div className="col-lg-8">

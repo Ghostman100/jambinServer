@@ -218,10 +218,6 @@ export default class Users extends React.Component {
                     </div>
 
                 </div>
-
-                <script src="../js/libs.min.js"/>
-                <script src="../js/jquery-ui.min.js"/>
-                <script src="../js/common.js"/>
             </div>
         )
     }

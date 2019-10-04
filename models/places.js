@@ -4,7 +4,7 @@ const boards = {latitude: 0.0012, longitude: 0.0021};
 class Places {
     static all() {
         return new Promise(resolve => {
-            const query = 'select * from places';
+            const query = 'select * from places where removed is FALSE';
             db.query(query, null, (places, err) => {
                 if (err) {
                     console.log(err)
@@ -17,7 +17,7 @@ class Places {
 
     static findByPlace(place) {
         return new Promise(resolve => {
-            const query = 'SELECT * from places where (latitude between ' + (place.latitude - boards.latitude) + " AND " + (Number(place.latitude) + boards.latitude) +
+            const query = 'SELECT * from places where (removed is FALSE) and (latitude between ' + (place.latitude - boards.latitude) + " AND " + (Number(place.latitude) + boards.latitude) +
                 ") AND (" +
                 "longitude BETWEEN " + (place.longitude - boards.longitude) + " AND " + (Number(place.longitude) + boards.longitude) + ")";
             db.query(query, null, (places, err) => {
@@ -28,6 +28,29 @@ class Places {
                 }
             })
         })
+    }
+
+    static delete(ids) {
+        console.log(ids);
+        let params = '(';
+        ids.forEach((id) => {
+            params += id + ','
+        });
+        params = params.substr(0, params.length - 1) + ')';
+        let query = 'update places set removed = 1 where id IN ' + params;
+        return (new Promise(resolve => {
+                    db.query(query, null, (place, err) => {
+                        if (err) {
+                            console.log(err)
+                        } else {
+                            console.log(place);
+                            resolve()
+                        }
+                    });
+
+                }
+            )
+        )
     }
 
     static create(params) {

@@ -9,6 +9,17 @@ export default class ToolBar extends React.Component {
     }
 
     render() {
+        let path = window.location.href.split('/');
+        path = path[path.length - 1];
+        console.log('path', path);
+        let userClass = '', placeClass = '';
+        switch (path) {
+            case 'users':
+                userClass = 'selected';
+                break;
+            case 'places' :
+                placeClass = 'selected';
+        }
         return (
             <div className="toolbar">
                 <div className="container">
@@ -21,8 +32,8 @@ export default class ToolBar extends React.Component {
                             <div className="toolbar-row">
                                 <div className="toolbar__navigation">
                                     <ul className="toolbar__tabs">
-                                        <li className="selected"><a href="places">Места</a></li>
-                                        <li><a href="users">Пользователи</a></li>
+                                        <li className={placeClass}><a href="places">Места</a></li>
+                                        <li className={userClass}><a href="users">Пользователи</a></li>
                                         <li><a href="#">Жалобы</a></li>
                                     </ul>
                                 </div>

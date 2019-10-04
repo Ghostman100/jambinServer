@@ -15,6 +15,7 @@ export default class App extends React.Component {
     }
 
     render() {
+        console.log(window.location.href);
         return (
             <Router>
                 <div>
