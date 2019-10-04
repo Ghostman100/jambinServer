@@ -5,12 +5,16 @@ import '../css/main.css';
 import '../css/jquery-ui.min.css';
 import '../fonts/stylesheet.css';
 
+import $ from "jquery";
+
+
 export default class Users extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
             users: [],
+            minAge: 18,
             search: ''
         }
     }
@@ -25,6 +29,10 @@ export default class Users extends React.Component {
                 this.setState({users: users})
             })
             .catch(err => console.log(err))
+    }
+
+    componentDidMount() {
+        $('#minCost').change(() => console.log('aaa'))
     }
 
     renderUser = (user) => {
@@ -70,6 +78,7 @@ export default class Users extends React.Component {
     };
 
     render() {
+        console.log(this.state.minAge);
         return (
             <div className="tabs__content">
                 <div className="container">
@@ -85,7 +94,9 @@ export default class Users extends React.Component {
                                         </div>
                                         <div className="flex">
                                             <label className="from">
-                                                <input id="minCost" type="text" value="18"/>
+                                                <input id="minCost" type="text"
+                                                       //onChange={(e) => this.setState({minAge: e.target.value})}
+                                                       value="18"/>
                                             </label>
                                             <label className="until">
                                                 <input id="maxCost" type="text" value="100"/>

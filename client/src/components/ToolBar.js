@@ -19,6 +19,10 @@ export default class ToolBar extends React.Component {
                 break;
             case 'places' :
                 placeClass = 'selected';
+                break;
+            default:
+                placeClass = 'selected';
+
         }
         return (
             <div className="toolbar">
