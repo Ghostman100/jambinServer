@@ -1,12 +1,12 @@
 import React from 'react';
+
 import '../css/reboot.css';
 import '../css/bootstrap-grid.css';
 import '../css/main.css';
 import '../css/jquery-ui.min.css';
 import '../fonts/stylesheet.css';
-
-import $ from "jquery";
-
+import AgeSlider from "../components/AgeSlider";
+import Input from '@material-ui/core/Input';
 
 export default class Users extends React.Component {
 
@@ -14,33 +14,62 @@ export default class Users extends React.Component {
         super(props);
         this.state = {
             users: [],
-            minAge: 18,
-            search: ''
+            ageRange: [18, 100],
+            search: '',
+            sex: 'all',
+            genderActive: false,
+            ageRangeActive: false
         }
     }
 
     componentWillMount() {
         fetch('/users/all')
             .then(res => res.json())
+            .then((users) => {
+                return (users.map((user) => {
+                    user['age'] = Math.floor((new Date() - new Date(user.birthday).getTime()) / 3.15576e+10);
+                    return (user)
+                }))
+            })
             .then(users => {
-                users = users.map((user) => {
-                    return (this.renderUser(user))
-                });
-                this.setState({users: users})
+                // users = users.map((user) => {
+                //     return (this.renderUser(user))
+                // });
+                this.setState({users: users, allUsers: users})
             })
             .catch(err => console.log(err))
     }
 
-    componentDidMount() {
-        $('#minCost').change(() => console.log('aaa'))
-    }
+    ageFilter = () => {
+        let users = [];
+        this.state.allUsers.forEach((user) => {
+            if (user.age >= this.state.ageRange[0] && user.age <= this.state.ageRange[1]) {
+                users.push(user)
+            }
+        });
+        this.setState({users: users})
+    };
+
+    sexFilter = (sex) => {
+        let users = [];
+        if (sex) {
+            this.state.allUsers.forEach((user) => {
+                if (user.sex === sex) {
+                    users.push(user)
+                }
+                this.setState({users: users})
+            })
+        } else {
+            this.setState({users: this.state.allUsers})
+        }
+    };
 
     renderUser = (user) => {
         let d = new Date(user.updated_at);
         const strDate = d.getDate() + "." + (d.getMonth() + 1) + "." + d.getFullYear();
         return (
             <tr>
-                <td className="result-check"><label><input type="checkbox"/><span></span></label>
+                <td className="result-check"><label><input type="checkbox"/><span/></label>
                 </td>
                 <td className="user-name">{user.name}</td>
                 {/*<td className="user-family">Васильева</td>*/}
@@ -51,7 +80,7 @@ export default class Users extends React.Component {
                 <td className="user-time">TDB</td>
 
                 <td className="user-more">
-                    <button type="button" className="btn-more"></button>
+                    <button type="button" className="btn-more"/>
                     <div className="drop-table">
                         <div className="inner">
                             <div className="drop-table_item">Заблокировать на 1 час</div>
@@ -69,56 +98,130 @@ export default class Users extends React.Component {
             fetch('/users/search?q=' + this.state.search)
                 .then(res => res.json())
                 .then(users => {
-                    const usersTr = users.map(user => this.renderUser(user));
-                    this.setState({users: usersTr})
+                    // const usersTr = users.map(user => this.renderUser(user));
+                    this.setState({users: users})
                 })
                 .catch(err => console.log(err))
         }
 
     };
 
+    handleChange = (event, newValue) => {
+        this.setState({ageRange: newValue});
+    };
+
+    rightInput = (e) => {
+        let range = this.state.ageRange;
+        range[1] = e.target.value;
+        this.setState({ageRange: range})
+    };
+
+    leftInput = (e) => {
+        let range = this.state.ageRange;
+        range[0] = e.target.value === '' ? '' : Number(e.target.value);
+        this.setState({ageRange: range})
+
+    };
+
+    handleBlur = () => {
+        let range = this.state.ageRange;
+        if (range[0] < 18) {
+            range[0] = 18;
+            this.setState({ageRange: range})
+        } else if (range[0] > 100) {
+            range[0] = 100;
+            this.setState({ageRange: range})
+        }
+        if (range[1] < 18) {
+            range[1] = 18;
+            this.setState({ageRange: range})
+        } else if (range[1] > 100) {
+            range[1] = 100;
+            this.setState({ageRange: range})
+        }
+    };
+
     render() {
-        console.log(this.state.minAge);
+        console.log(this.state.sex, this.state.users);
         return (
             <div className="tabs__content">
                 <div className="container">
                     <div className="user-filter">
                         <form action="/">
-                            <div className="user-filter_item user-filter_age">
-                                <span>Возраст</span>
+                            <div className={`user-filter_item user-filter_age${this.state.ageRangeActive === true ? ' active' : ''}`}
+                                 onClick={() => this.setState({ageRangeActive: !this.state.ageRangeActive})}
+                            >
+                                    <span> Возраст</span>
+
                                 <div className="drop-filter drop-filter_age">
-                                    <div className="inner">
+                                    <div
+                                        onClick={(e) => e.stopPropagation()}
+                                        className="inner">
                                         <div className="title">Возраст</div>
                                         <div className="wrap-range">
-                                            <div id="age-range"></div>
+                                            <AgeSlider
+                                                value={this.state.ageRange}
+                                                onChange={this.handleChange}
+                                                valueLabelDisplay={'on'}
+                                                aria-labelledby="range-slider"
+                                                filter={this.ageFilter}
+                                                // getAriaValueText={valuetext}
+                                            />
                                         </div>
                                         <div className="flex">
                                             <label className="from">
-                                                <input id="minCost" type="text"
-                                                       //onChange={(e) => this.setState({minAge: e.target.value})}
-                                                       value="18"/>
+                                                <input id="maxCost"
+                                                       onChange={this.leftInput}
+                                                       type={'number'}
+                                                       onBlur={this.handleBlur}
+                                                       value={this.state.ageRange[0]}/>
                                             </label>
                                             <label className="until">
-                                                <input id="maxCost" type="text" value="100"/>
+                                                <input id="maxCost"
+                                                       onChange={this.rightInput}
+                                                       type={'number'}
+                                                       onBlur={this.handleBlur}
+                                                       value={this.state.ageRange[1]}/>
                                             </label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="user-filter_item user-filter_gender">
+                            <div
+                                onClick={() => this.setState({genderActive: !this.state.genderActive})}
+                                className={`user-filter_item user-filter_gender${this.state.genderActive === true ? ' active' : ''}`}>
                                 <span>Пол</span>
                                 <div className="drop-filter drop-filter_check drop-filter_gender">
-                                    <div className="inner">
+                                    <div
+                                        onClick={(e) => e.stopPropagation()}
+                                        className="inner">
                                         <div className="checkbox">
-                                            <input type="checkbox" id="check-all"/>
+                                            <input type="checkbox" id="check-all"
+                                                   onChange={() => {
+
+                                                       this.setState({sex: 'all'});
+                                                       this.sexFilter()
+                                                   }}
+                                                   checked={this.state.sex === 'all'}
+                                            />
                                             <label htmlFor="check-all"><strong>Все</strong></label>
                                         </div>
                                         <div className="checkbox">
-                                            <input type="checkbox" id="check-female"/>
+                                            <input type="checkbox" id="check-female"
+                                                   onChange={() => {
+                                                       this.setState({sex: 'f'});
+                                                       this.sexFilter('f')
+                                                   }}
+                                                   checked={this.state.sex === 'f'}/>
                                             <label htmlFor="check-female">Женский</label>
                                         </div>
                                         <div className="checkbox">
-                                            <input type="checkbox" id="check-male"/>
+                                            <input type="checkbox" id="check-male"
+                                                   onChange={() => {
+                                                       this.setState({sex: 'm'});
+                                                       this.sexFilter('m')
+                                                   }}
+                                                   checked={this.state.sex === 'm'}/>
                                             <label htmlFor="check-male">Мужской</label>
                                         </div>
                                     </div>
@@ -209,7 +312,9 @@ export default class Users extends React.Component {
                             </tr>
                             </thead>
                             <tbody>
-                            {this.state.users}
+                            {this.state.users.map((user) => {
+                                return (this.renderUser(user))
+                            })}
                             </tbody>
                         </table>
 

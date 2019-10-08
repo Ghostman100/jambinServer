@@ -407,6 +407,12 @@ td.result-house {
     padding-top: 21px;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .table-pagination ul {
     padding-left: 0;
     list-style: none;
@@ -675,7 +681,7 @@ td.result-house {
 
 .drop-filter_age .wrap-range {
     padding-left: 16px;
-    padding-right: 7px;
+    padding-right: 16px;
     margin-bottom: 23px;
 }
 

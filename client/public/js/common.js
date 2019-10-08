@@ -1,14 +1,14 @@
 $(document).ready(function () {
 
-  $('.user-filter_item').click(function(){
-
-    if ( $(this).hasClass('active') ) {
-      $(this).removeClass('active');
-    } else {
-      $(this).addClass('active');
-    }
-
-  });
+  // $('.user-filter_item').click(function(){
+  //
+  //   if ( $(this).hasClass('active') ) {
+  //     $(this).removeClass('active');
+  //   } else {
+  //     $(this).addClass('active');
+  //   }
+  //
+  // });
 
   $('.complaint-filter_item').click(function(){
 
@@ -20,9 +20,17 @@ $(document).ready(function () {
 
   });
 
-  $(".drop-filter").click(function(event) {
-      event.stopPropagation();
-  });
+  // $(".inner").click(function(event) {
+  //     event.stopPropagation();
+  // });
+
+   // let innres =  document.querySelectorAll('.inner');
+   // for(let inner of innres){
+   //     inner.addEventListener('click', (e)=>{
+   //         e.stopPropagation();
+   //         console.log('click')
+   //     });
+   // }
 
   $('.btn-more').click(function(){
     $(this).parent().find('.drop-table').toggleClass('active');
@@ -86,10 +94,5 @@ $(document).ready(function () {
 
 
         });
-
-
-
-
-
 
 });
