@@ -53,8 +53,23 @@ class User {
 
     }
 
+    static where(key, value) {
+        const query = "SELECT * FROM user where " + key + ' = ' + value;
+        console.log('aaa', "SELECT * FROM user where " + key + ' = ' + value);
+        return (new Promise((resolve => {
+                db.query(query, null, (users, err) => {
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        resolve(users)
+                    }
+                })
+            })
+        ))
+    }
+
     static search(params) {
-        console.log(params);
+        // console.log(params);
         const query = "SELECT * FROM user where name like '%" + params + "%' OR phoneNumber like '%" + params + "%'";
         return (new Promise((resolve => {
                 db.query(query, params, (users, err) => {

@@ -32,6 +32,15 @@ router.post('/create', upload.single('photo'), function (req, res, next) {
 
 });
 
+router.get('/where', (req, res, next) => {
+    console.log(req.query);
+    Users.where(req.query.key, req.query.value)
+        .then((users) => {
+                res.status(200).json(users)
+            }
+        )
+});
+
 router.get('/search', (req, res, next) => {
     console.log(req.query);
     Users.search(req.query.q)
