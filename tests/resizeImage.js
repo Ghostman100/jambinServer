@@ -15,12 +15,12 @@ pool.getConnection(function (err, connection) {
             // b = path.slice('/')
             let newPath = 'public/images/' + path.photoPath;
             sharp(newPath)
-                .resize(600, 600)
-                .toFile('public/images/large_' + path.photoPath, (err, info) => {
+                .resize(200, 200)
+                .toFile('public/images/s_' + path.photoPath, (err, info) => {
                     console.log(err, info);
-                    connection.query('update user set ' + "photoPath= 'large_" + path.photoPath + "' where id=" + path.id, (error, res) => {
-                        console.log(error, res )
-                    })
+                    // connection.query('update user set ' + "photoPath= 's_" + path.photoPath + "' where id=" + path.id, (error, res) => {
+                    //     console.log(error, res )
+                    // })
                 })
         })
     });

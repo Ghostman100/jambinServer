@@ -3,6 +3,8 @@ var router = express.Router();
 const Users = require('../models/user');
 const multer = require('multer');
 const Photos = require('../models/photos');
+const sharp = require('sharp');
+
 // const bodyParser = require('body-parser');
 // router.use(bodyParser.json());
 
@@ -20,6 +22,12 @@ const upload = multer({storage: Storage});
 router.post('/create', upload.single('photo'), function (req, res, next) {
     let body = JSON.parse(JSON.stringify(req.body));
     body['photoPath'] = req.file.filename;
+    const path = 'public/images/' + req.file.filename;
+    sharp(path)
+        .resize(200)
+        .toFile('public/images/s_' + req.file.filename, (err, info) => {
+            console.log(err, info);
+        });
     body['phoneNumber'] = body.phone;
     body['birthday'] = new Date(body.birthday.replace(/"/gi, ''));
     delete body['phone'];
@@ -81,6 +89,12 @@ router.post('/photo/make_main', (req, res, next) => {
 router.post('/photo', upload.single('photo'), function (req, res, next) {
     let body = JSON.parse(JSON.stringify(req.body));
     body['path'] = req.file.filename;
+    const path = 'public/images/' + req.file.filename;
+    sharp(path)
+        .resize(200)
+        .toFile('public/images/s_' + req.file.filename, (err, info) => {
+            console.log(err, info);
+        });
     Photos.add(body)
         .then((photos) => {
             console.log(JSON.stringify(photos));
