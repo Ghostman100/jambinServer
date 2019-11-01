@@ -71,10 +71,10 @@ class User {
         let date = new Date();
         let startDate = date.setFullYear(date.getFullYear() - start);
         startDate = new Date(startDate);
-        startDate = startDate.getFullYear()  + '-' + (startDate.getMonth()) + '-' + startDate.getDay();
+        startDate = startDate.getFullYear()  + '-' + (startDate.getMonth()) + '-' + startDate.getDate();
         let endDate = date.setFullYear( date.getFullYear() - Number(end) + Number(start) );
         endDate = new Date(endDate);
-        endDate = endDate.getFullYear()  + '-' + (endDate.getMonth()) + '-' + endDate.getDay();
+        endDate = endDate.getFullYear()  + '-' + (endDate.getMonth()) + '-' + endDate.getDate();
 
         const query = "SELECT * from user where birthday BETWEEN '" + endDate + "' AND '" + startDate + "'";
         console.log(query);

@@ -40,11 +40,13 @@ router.post('/create', upload.single('photo'), function (req, res, next) {
 
 });
 
-router.post('/delete', (res, req, next) => {
-    console.log(res.body); 
-   Users.delete(res.body.id)
+router.post('/delete', (req, res, next) => {
+    console.log(req.body);
+   Users.delete(req.body.id)
        .then(() => {
-               res.status(200).json('success')
+           res.status(200).json({
+               status: "success"
+           })
            }
        )
 });
