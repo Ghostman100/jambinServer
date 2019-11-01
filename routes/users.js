@@ -40,8 +40,17 @@ router.post('/create', upload.single('photo'), function (req, res, next) {
 
 });
 
+router.post('/delete', (res, req, next) => {
+    console.log(res.body); 
+   Users.delete(res.body.id)
+       .then(() => {
+               res.status(200).json('success')
+           }
+       )
+});
+
 router.get('/where', (req, res, next) => {
-    console.log(req.query);
+    // console.log(req.query);
     Users.where(req.query.key, req.query.value)
         .then((users) => {
                 res.status(200).json(users)
@@ -50,7 +59,7 @@ router.get('/where', (req, res, next) => {
 });
 
 router.get('/search', (req, res, next) => {
-    console.log(req.query);
+    // console.log(req.query);
     Users.search(req.query.q)
         .then((users) => {
                 res.status(200).json(users)
@@ -104,6 +113,15 @@ router.post('/photo', upload.single('photo'), function (req, res, next) {
                 id: photos.insertId
             })
         })
+});
+
+router.get('/age', (req, res, next) => {
+    console.log(req.query);
+    Users.age(req.query.start, req.query.end)
+        .then((users) => {
+                res.status(200).json(users)
+            }
+        )
 });
 
 router.get('/all', function (req, res, next) {

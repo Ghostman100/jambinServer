@@ -8,11 +8,11 @@ class User {
                 connection.release();
                 throw err;
             }
-        connection.query('INSERT INTO user SET ?', params, function (error, results, fields) {
-            console.log(error, results);
-            cb(results.insertId);
-            connection.release();
-        });
+            connection.query('INSERT INTO user SET ?', params, function (error, results, fields) {
+                console.log(error, results);
+                cb(results.insertId);
+                connection.release();
+            });
             connection.on('error', function (err) {
                 throw err;
                 return;
@@ -51,6 +51,43 @@ class User {
             });
         });
 
+    }
+
+    static delete(id) {
+        const query = 'DELETE FROM user where id = ' + id;
+        return (new Promise((resolve => {
+                db.query(query, null, (users, err) => {
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        resolve(users)
+                    }
+                })
+            })
+        ))
+    }
+
+    static age(start, end) {
+        let date = new Date();
+        let startDate = date.setFullYear(date.getFullYear() - start);
+        startDate = new Date(startDate);
+        startDate = startDate.getFullYear()  + '-' + (startDate.getMonth()) + '-' + startDate.getDay();
+        let endDate = date.setFullYear( date.getFullYear() - Number(end) + Number(start) );
+        endDate = new Date(endDate);
+        endDate = endDate.getFullYear()  + '-' + (endDate.getMonth()) + '-' + endDate.getDay();
+
+        const query = "SELECT * from user where birthday BETWEEN '" + endDate + "' AND '" + startDate + "'";
+        console.log(query);
+        return (new Promise((resolve => {
+                db.query(query, null, (users, err) => {
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        resolve(users)
+                    }
+                })
+            })
+        ))
     }
 
     static where(key, value) {
