@@ -4,7 +4,7 @@ const boards = {latitude: 0.0012, longitude: 0.0021};
 class Places {
     static all() {
         return new Promise(resolve => {
-            const query = 'select p.*, count(p.name) size from places p join user u on p.id = u.place_id group by p.id;';
+            const query = 'select p.*, u.place_id, count(u.place_id) size from places p left join user u on p.id = u.place_id group by p.id;';
             db.query(query, null, (places, err) => {
                 if (err) {
                     console.log(err)
