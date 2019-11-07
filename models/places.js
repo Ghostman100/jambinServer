@@ -4,7 +4,7 @@ const boards = {latitude: 0.0012, longitude: 0.0021};
 class Places {
     static all() {
         return new Promise(resolve => {
-            const query = 'select p.*, u.place_id, count(u.place_id) size from places p left join user u on p.id = u.place_id group by p.id;';
+            const query = 'select p.*, count(u.place_id) size from places p left join user u on p.id = u.place_id where p.removed is false group by p.id;';
             db.query(query, null, (places, err) => {
                 if (err) {
                     console.log(err)
@@ -17,9 +17,10 @@ class Places {
 
     static findByPlace(place) {
         return new Promise(resolve => {
-            const query = 'SELECT * from places where (removed is FALSE) and (latitude between ' + (place.latitude - boards.latitude) + " AND " + (Number(place.latitude) + boards.latitude) +
+            const query = 'SELECT p.* from places p left join user u on p.id = u.place_id where (removed is FALSE) and (latitude between ' + (place.latitude - boards.latitude) + " AND " + (Number(place.latitude) + boards.latitude) +
                 ") AND (" +
-                "longitude BETWEEN " + (place.longitude - boards.longitude) + " AND " + (Number(place.longitude) + boards.longitude) + ")";
+                "longitude BETWEEN " + (place.longitude - boards.longitude) + " AND " + (Number(place.longitude) + boards.longitude) + ")" +
+                " group by p.id;";
             db.query(query, null, (places, err) => {
                 if (err) {
                     console.log(err)
