@@ -33,6 +33,20 @@ class User {
             })
         ))
     }
+    
+    static report(params) {
+        const query = 'INSERT INTO reports set ?';
+        return (new Promise((resolve => {
+                db.query(query, params, (user, err) => {
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        resolve()
+                    }
+                })
+            })
+        ))
+    }
 
     static find(id, cb, errorCb) {
         pool.getConnection(function (err, connection) {

@@ -69,6 +69,15 @@ router.get('/search', (req, res, next) => {
         )
 });
 
+router.post('/report', (req, res, next) => {
+    Users.report(req.body)
+        .then(() => {
+            res.status(200).json({
+                status: "success"
+            })
+        })
+});
+
 router.post('/photo/delete', (req, res, next) => {
     Photos.delete(req.body.id)
         .then(() => {
