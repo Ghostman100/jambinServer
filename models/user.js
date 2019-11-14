@@ -33,7 +33,21 @@ class User {
             })
         ))
     }
-    
+
+    static reports() {
+        const query = 'select reports.*, user.name, user.sex, user.birthday from user, reports where reports.reported_id = user.id;';
+        return (new Promise((resolve => {
+                db.query(query, null, (reports, err) => {
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        resolve(reports)
+                    }
+                })
+            })
+        ))
+    }
+
     static report(params) {
         const query = 'INSERT INTO reports set ?';
         return (new Promise((resolve => {

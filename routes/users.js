@@ -60,6 +60,15 @@ router.get('/where', (req, res, next) => {
         )
 });
 
+router.get('/reports', (req, res, next) => {
+    // console.log(req.query);
+    Users.reports()
+        .then((reports) => {
+                res.status(200).json(reports)
+            }
+        )
+});
+
 router.get('/search', (req, res, next) => {
     // console.log(req.query);
     Users.search(req.query.q)
