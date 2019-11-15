@@ -7,7 +7,7 @@ $(document).ready(function () {
     } else {
       $(this).addClass('active');
     }
-    
+
   });
 
   $('.complaint-filter_item').click(function(){
@@ -17,10 +17,10 @@ $(document).ready(function () {
     } else {
       $(this).addClass('active');
     }
-    
+
   });
 
-  $(".drop-filter").click(function(event) { 
+  $(".drop-filter").click(function(event) {
       event.stopPropagation();
   });
 
@@ -35,9 +35,9 @@ $(document).ready(function () {
 
   $(function(){
       $("td.user-type").mousemove(function (eventObject) {
-          $data_tooltip = $(this).text();
+          $data_tooltip = $(this).outerText;
           $("#tooltip").html($data_tooltip)
-              .css({ 
+              .css({
                 "top" : eventObject.pageY + 5,
                 "left" : eventObject.pageX + 5
               })
@@ -83,12 +83,12 @@ $(document).ready(function () {
           }
         });
 
-        
+
         });
 
 
-        
-   
+
+
 
 
 });

@@ -34,8 +34,14 @@ class User {
         ))
     }
 
-    static reports() {
-        const query = 'select reports.*, user.name, user.sex, user.birthday from user, reports where reports.reported_id = user.id;';
+    static reports(type) {
+        let dop;
+        if (type) {
+            dop = " and reports.type = '" + type + "'";
+        } else {
+            dop = '';
+        }
+        const query = 'select reports.*, user.name, user.sex, user.birthday from user, reports where reports.reported_id = user.id' + dop;
         return (new Promise((resolve => {
                 db.query(query, null, (reports, err) => {
                     if (err) {

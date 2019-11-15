@@ -61,8 +61,8 @@ router.get('/where', (req, res, next) => {
 });
 
 router.get('/reports', (req, res, next) => {
-    // console.log(req.query);
-    Users.reports()
+    console.log(req.query.type);
+    Users.reports(req.query.type)
         .then((reports) => {
                 res.status(200).json(reports)
             }
