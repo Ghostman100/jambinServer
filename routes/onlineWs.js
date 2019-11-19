@@ -48,7 +48,7 @@ wss.on('connection', function connection(ws) {
 
     ws.on('close', (event) => {
         console.log('wsClose', event.reason);
-        User.update(clientId, {online_status: 'offline', place_id: NULL});
+        User.update(clientId, {online_status: 'offline', place_id: null});
     })
 
 
