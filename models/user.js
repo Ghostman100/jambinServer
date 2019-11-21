@@ -1,5 +1,6 @@
 var pool = require('../database');
 var db = require('../pool');
+const {Expo} = require('expo-server-sdk');
 
 class User {
     static create(params, cb) {
@@ -105,10 +106,10 @@ class User {
         let date = new Date();
         let startDate = date.setFullYear(date.getFullYear() - start);
         startDate = new Date(startDate);
-        startDate = startDate.getFullYear()  + '-' + (startDate.getMonth()) + '-' + startDate.getDate();
-        let endDate = date.setFullYear( date.getFullYear() - Number(end) + Number(start) );
+        startDate = startDate.getFullYear() + '-' + (startDate.getMonth()) + '-' + startDate.getDate();
+        let endDate = date.setFullYear(date.getFullYear() - Number(end) + Number(start));
         endDate = new Date(endDate);
-        endDate = endDate.getFullYear()  + '-' + (endDate.getMonth()) + '-' + endDate.getDate();
+        endDate = endDate.getFullYear() + '-' + (endDate.getMonth()) + '-' + endDate.getDate();
 
         const query = "SELECT * from user where birthday BETWEEN '" + endDate + "' AND '" + startDate + "'";
         console.log(query);
@@ -137,6 +138,38 @@ class User {
                 })
             })
         ))
+    }
+
+    static pushNotification(id, text) {
+        const query = 'SELECT push_token from user WHERE id = ' + id;
+        db.query(query, params, (pushToken, err) => {
+            if (err) {
+                console.log(err)
+            } else {
+                let expo = new Expo();
+                if (!Expo.isExpoPushToken(pushToken[0].push_token)) {
+                    console.error(`Push token ${pushToken[0].push_token} is not a valid Expo push token`);
+                }
+                let message = [{
+                    to: pushToken,
+                    // title: 'JS sa',
+                    sound: 'default',
+                    body: text,
+                    data: { withSome: 'data' },
+                }];
+                let chunks = expo.chunkPushNotifications(message);
+                (async () => {
+                    for (let chunk of chunks) {
+                        try {
+                            let ticketChunk = await expo.sendPushNotificationsAsync(chunk);
+                            console.log(ticketChunk);
+                        } catch (error) {
+                            console.error(error);
+                        }
+                    }
+                })();
+            }
+        })
     }
 
     static search(params) {

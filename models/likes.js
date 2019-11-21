@@ -1,9 +1,11 @@
 var db = require('../pool');
+const Users = require('./user');
 
 class Likes {
     static like(params, cb) {
         const query = 'INSERT INTO likes set ?';
-        db.query(query, params, cb)
+        db.query(query, params, cb);
+        Users.pushNotification(params.recipient_id, "К вам проявлена симпатия")
     }
 
     static dislike(params, cb) {

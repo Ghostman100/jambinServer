@@ -1,5 +1,6 @@
 const WebSocket = require('ws');
 const Dialog = require('../models/dialog');
+const Users = require('../models/user');
 
 const wss = new WebSocket.Server({port: 8080});
 
@@ -30,6 +31,7 @@ wss.on('connection', function connection(ws) {
             }
             case 'message': {
                 Dialog.create(client.id, recipientId, data.text, (message) => {
+                    Users.pushNotification(recipientId, 'У вас новое сообщение');
                     if (clients[recipientId]) {
                         clients[recipientId].ws.send(JSON.stringify({senderId: client.id, message: data.text}))
                     }
