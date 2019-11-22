@@ -146,13 +146,14 @@ class User {
             if (err) {
                 console.log(err)
             } else {
-                console.log(pushToken);
+                console.log(pushToken[0].push_token);
                 let expo = new Expo();
                 if (!Expo.isExpoPushToken(pushToken[0].push_token)) {
                     console.error(`Push token ${pushToken[0].push_token} is not a valid Expo push token`);
+                    return;
                 }
                 let message = [{
-                    to: pushToken,
+                    to: pushToken[0].push_token,
                     // title: 'JS sa',
                     sound: 'default',
                     body: text,
