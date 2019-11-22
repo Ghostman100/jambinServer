@@ -31,7 +31,7 @@ wss.on('connection', function connection(ws) {
             }
             case 'message': {
                 Dialog.create(client.id, recipientId, data.text, (message) => {
-                    Users.pushNotification(recipientId, 'У вас новое сообщение');
+                    Users.pushNotification(recipientId, 'message', 'У вас новое сообщение');
                     if (clients[recipientId]) {
                         clients[recipientId].ws.send(JSON.stringify({senderId: client.id, message: data.text}))
                     }

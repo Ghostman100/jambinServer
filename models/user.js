@@ -140,20 +140,26 @@ class User {
         ))
     }
 
-    static pushNotification(id, text) {
-        const query = 'SELECT push_token from user WHERE id = ' + id;
-        db.query(query, null, (pushToken, err) => {
+    static pushNotification(id, type, text ) {
+        const query = 'SELECT push_token, likes_push, message_push, common_likes_pushes from user WHERE id = ' + id;
+        db.query(query, null, (user, err) => {
             if (err) {
                 console.log(err)
             } else {
-                console.log(pushToken[0].push_token);
+                if((type === 'message' && !user[0].message_push) ||
+                    (type === 'like' && !user[0].likes_push) ||
+                    (type === 'common_like' && !user[0].common_likes_pushes)
+                ) {
+                    return;
+                }
+                console.log(user[0].push_token);
                 let expo = new Expo();
-                if (!Expo.isExpoPushToken(pushToken[0].push_token)) {
-                    console.error(`Push token ${pushToken[0].push_token} is not a valid Expo push token`);
+                if (!Expo.isExpoPushToken(user[0].push_token)) {
+                    console.error(`Push token ${user[0].push_token} is not a valid Expo push token`);
                     return;
                 }
                 let message = [{
-                    to: pushToken[0].push_token,
+                    to: user[0].push_token,
                     // title: 'JS sa',
                     sound: 'default',
                     body: text,
