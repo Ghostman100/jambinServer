@@ -146,6 +146,7 @@ class User {
             if (err) {
                 console.log(err)
             } else {
+                console.log(pushToken);
                 let expo = new Expo();
                 if (!Expo.isExpoPushToken(pushToken[0].push_token)) {
                     console.error(`Push token ${pushToken[0].push_token} is not a valid Expo push token`);
