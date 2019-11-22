@@ -142,7 +142,7 @@ class User {
 
     static pushNotification(id, text) {
         const query = 'SELECT push_token from user WHERE id = ' + id;
-        db.query(query, params, (pushToken, err) => {
+        db.query(query, null, (pushToken, err) => {
             if (err) {
                 console.log(err)
             } else {
