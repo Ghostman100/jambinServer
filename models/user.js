@@ -152,6 +152,17 @@ class User {
                 ) {
                     return;
                 }
+                if (type === 'like' && user[0].likes_pushes === 10)
+                {
+                    let check = true;
+                    const new_like_count = 'SELECT count(*) new_likes from likes where new_status IS TRUE';
+                    db.query(new_like_count, null, (res, err) => {
+                        if (res[0].new_likes <= 10) {
+                            check = false
+                        }
+                    });
+                    if(!check) return;
+                }
                 console.log(user[0].push_token);
                 let expo = new Expo();
                 if (!Expo.isExpoPushToken(user[0].push_token)) {

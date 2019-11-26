@@ -4,8 +4,19 @@ const Users = require('./user');
 class Likes {
     static like(params, cb) {
         const query = 'INSERT INTO likes set ?';
+        const check_common = 'SELECT * from likes where sender_id = ' + params.recipient_id + ' AND recipient_id = ' + params.sender_id;
         db.query(query, params, cb);
-        Users.pushNotification(params.recipient_id, "К вам проявлена симпатия")
+        db.query(check_common, null, (like, err) => {
+            if (err) {
+                console.log(err)
+            } else {
+                if (like.length > 0) {
+                    Users.pushNotification(params.recipient_id, 'common_like', "У вас взаимная симпатия")
+
+                }
+            }
+        });
+        Users.pushNotification(params.recipient_id, 'like', "К вам проявлена симпатия")
     }
 
     static dislike(params, cb) {
